@@ -34,7 +34,9 @@ var quotes= [
   {
       quote: "When you are down feeling no one is good to you,be good to yourself",
 
-      source: "Anonymous Thinker"
+      source: "Anonymous Thinker",
+      
+      year: " Sometime in 2019"
   }
   ]
     console.log(quotes);
@@ -48,14 +50,11 @@ var quotes= [
 
   // Use the generated random number as an index to pull out a corresponding random quote. // 
 
-  for (var i = 0; i< quotes.length; i += 1); {
-
       var randomNum = quotes[randomIndex];
 
 // Return the random quote picked from the array of objects.//
 
-      return randomNum;
-  }  
+      return randomNum; 
   }
   console.log(getRandomQuote());
 
@@ -68,7 +67,7 @@ var quotes= [
 
       var randomQuotes = getRandomQuote();
 
-      var HTML;
+      var HTML ='';
 
 // Concatenate the string properties of my objects to display on the screen the whole quote.//
 
@@ -77,11 +76,11 @@ var quotes= [
 
 // Testing if the quote object has a citation and a year, if yes print them on the screen.//
 
-    if ( randomQuotes.citation === true ) {
+    if ( randomQuotes.citation ) {
 
         HTML += '<span class="citation">' + randomQuotes.citation +'</span>'
 
- } if ( randomQuotes.year === true) {
+ } if ( randomQuotes.year ) {
      
      HTML += '<span class="year">'+ randomQuotes.year + '</span>'
 
